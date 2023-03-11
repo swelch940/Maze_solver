@@ -81,6 +81,9 @@ The remaining process is excatly the same.
 
 ## Output
 
+The output of both algorithms will provide you with 4 different things. The first is confirmation that your exit coordinates are the exit. The second is the execution time of the algorithm. Thirdly, the total number of nodes that were visited to find the path, and lastly, the total number of steps in the path to the exit. 
 
 
 ## Editing the files to get the path.
+
+You can edit the code to print out each of the coordinates in the path by uncommenting the print statements in the code. The code to produce the coordinates for each point along the path to the exit is already in the code, however, since this was a university project it is currently commented out due to my professor not wanting it. Just make sure lines .. ... are not commented out and the program will then also output the coordinates for every point in the path.
