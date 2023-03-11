@@ -8,7 +8,7 @@
 
 ## About 
 
-In this project we look to be able to solve a given maze by returning a path through the maze. We have implemented two different search algorithms which both will search through each potiental position of the maze until the path through the maze is found. The first algorithm implemented is a Depth-first search which will contiously consider each potiential position in the maze until a path through the maze is found. However, this algorithm does not gurantee it will find the most optimal path through the maze. It will just return the first path through the maze it finds. The second algorithm implemented is A* search. This is similar, however a huestric function is implemented making the algorithm more efficient and gurantees to return the most opitaml path through the maze.
+In this project we look to be able to solve a given maze by returning a path through the maze. We have implemented two different search algorithms which both will search through each potiental position of the maze until the path through the maze is found. The first algorithm implemented is a Depth-first search which will contiously consider each potiential position in the maze until a path through the maze is found. However, this algorithm does not gurantee it will find the most optimal path through the maze. It will just return the first path through the maze it finds. The second algorithm implemented is A* search. This is similar, however a huestric function is implemented making the algorithm more efficient and gurantees to return the most optimal path through the maze.
 
 ## Requirements
 
