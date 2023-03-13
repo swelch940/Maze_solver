@@ -8,16 +8,26 @@ maze = [] #Intialising maze.
 input_file = input("Enter maze file: ")
 input_start = input("Enter the location of the start of the maze: ")
 input_end = input ("Enter the location of the end of the maze: ")
+print(input_end)
 
 input_start =  eval(input_start)
-input_end = eval(input_end)
+
+if input_end != "None":
+    input_end = eval(input_end)
+
 
 #Popluating maze as a 2d array from the text file given.
 with open(input_file, "r") as file:
     for row in file:
         maze.append(row.strip().split())
 
+if input_end == "None":
+    for i in maze[len(maze)-1]:
+        if i == "-":
+            input_end = (len(maze)-1, maze[len(maze)-1].index(i))
 
+
+print(input_end)
 #Depth-first search algorithm to calculate a path through a given matrix.
 def dfs(maze, start, goal, stack, seen):
     seen = set() #Set of possible positions in the maze we have seen. 

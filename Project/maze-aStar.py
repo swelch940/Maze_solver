@@ -2,6 +2,7 @@ import time
 from queue import PriorityQueue
 start_time = time.time()
 
+
 maze = [] #Intializing maze.
 
 input_file = input("Enter maze file: ")
@@ -9,12 +10,21 @@ input_start = input("Enter the location of the start of the maze: ")
 input_end = input ("Enter the location of the end of the maze: ")
 
 input_start =  eval(input_start)
-input_end = eval(input_end)
+
+
+if input_end != "None":
+    input_end = eval(input_end)
 
 #Populating maze as 2d array from text file given.
 with open(input_file, "r") as file:
     for row in file:
         maze.append(row.strip().split())
+
+if input_end == "None":
+    for i in maze[len(maze)-1]:
+        if i == "-":
+            input_end = (len(maze)-1, maze[len(maze)-1].index(i))
+
 
 #Function that returns a list of all the possible legal moves at a certain point in the maze.
 def legalMoves(points, maze):
