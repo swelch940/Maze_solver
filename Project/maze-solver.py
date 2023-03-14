@@ -1,4 +1,3 @@
-import numpy as np
 import time
 
 start_time = time.time() #Gets the start time of the algorithm
@@ -55,7 +54,7 @@ def dfs(maze, start, goal, stack, seen):
                 path.append(currentPoint)
                 currentPoint = parentMap.get(currentPoint)
                 
-            #print("Path: " + str(path))
+            #print("Path: " + str(path)) #Prints the path returned for the maze.
             print("Total number of steps in path: " + str(len(path)))
             return
         print("No!")
