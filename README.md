@@ -86,4 +86,4 @@ The output of both algorithms will provide you with 4 different things. The firs
 
 ## Editing the files to get the path.
 
-You can edit the code to print out each of the coordinates in the path by uncommenting the print statements in the code. The code to produce the coordinates for each point along the path to the exit is already in the code, however, since this was a university project it is currently commented out due to my professor not wanting it. Just make sure line 57 is uncommented in the maze-solver.py file and  ... are not commented out and the program will then also output the coordinates for every point in the path.
+You can edit the code to print out each of the coordinates in the path by uncommenting the print statements in the code. The code to produce the coordinates for each point along the path to the exit is already in the code, however, since this was a university project it is currently commented out due to my professor not wanting it. Just make sure line 57 is uncommented in the maze-solver.py file and in maze-aStar make sure lines 90 - 93 are uncommented and the program will then also output the coordinates for every point in the path.
