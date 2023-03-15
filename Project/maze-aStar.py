@@ -1,7 +1,5 @@
 import time
 from queue import PriorityQueue
-start_time = time.time()
-
 
 maze = [] #Intializing maze.
 
@@ -40,10 +38,6 @@ def legalMoves(points, maze):
     if points[1] - 1 >= 0 and maze[points[0]][points[1] - 1] != "#":
         nextPoints.append((points[0], points[1] - 1))
     
-    
-    
-    
-    
     return nextPoints
 
 
@@ -57,6 +51,7 @@ def heuristic(point1, point2):
 
 #A* search to find the most opitmal path through the maze.
 def aStar(maze, start, goal):
+    start_time = time.time()
     g_node = {}
     f_node ={}
     visited = set()
@@ -86,13 +81,15 @@ def aStar(maze, start, goal):
                 
                 fwdPath[path[cell]] = cell
                 cell = path[cell]
+             
+            path_through = list(fwdPath)
+            path_through.append(goal)
             
-            #path_through = [i for i in fwdPath]  #
+
             #path_through.reverse()
-            #path_through.append(goal)
             #print(path_through)
    
-            print("Total number of steps in path: " + str(len(fwdPath)))
+            print("Total number of steps in path: " + str(len(path_through)))
             return
         
         nextPoints = legalMoves(currentPoint, maze)
@@ -108,5 +105,4 @@ def aStar(maze, start, goal):
                 visited.add(i)
     
     
-
 aStar(maze, input_start, input_end)

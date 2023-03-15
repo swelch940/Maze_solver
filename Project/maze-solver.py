@@ -1,7 +1,5 @@
 import time
 
-start_time = time.time() #Gets the start time of the algorithm
-
 maze = [] #Intialising maze.
 
 input_file = input("Enter maze file: ")
@@ -27,8 +25,11 @@ if input_end == "None":
 
 
 print(input_end)
+
+
 #Depth-first search algorithm to calculate a path through a given matrix.
 def dfs(maze, start, goal, stack, seen):
+    start_time = time.time() #Gets the start time of the algorithm
     seen = set() #Set of possible positions in the maze we have seen. 
     stack = [start] #A stack to keep track of the positions in the maze wee need to evaluate.
     parentMap = {} #Hash map to keep track of the path we take through the maze.
@@ -53,11 +54,12 @@ def dfs(maze, start, goal, stack, seen):
             while currentPoint != start:
                 path.append(currentPoint)
                 currentPoint = parentMap.get(currentPoint)
-                
+            path.append(start)
+            #path.reverse()
             #print("Path: " + str(path)) #Prints the path returned for the maze.
             print("Total number of steps in path: " + str(len(path)))
             return
-        print("No!")
+        #print("No!")
         
 
         #Gets the list of all the possible legal moves for the current point in the maze.
@@ -80,19 +82,17 @@ def dfs(maze, start, goal, stack, seen):
 #Function that returns a list of all the possible legal moves at a certain point in the maze.
 def legalMoves(points, maze):
     nextPoints = []
-    if points[0] - 1 >= 0 and maze[points[0] - 1][points[1]] != "#":
-        nextPoints.append((points[0] - 1, points[1]))
     if points[1] + 1 < len(maze[points[0]]) and maze[points[0] + 1][points[1]] != "#":
         nextPoints.append((points[0] + 1, points[1]))
-    if points[1] + 1 < len(maze[points[0]]) and maze[points[0]][points[1] + 1] != "#":
-        nextPoints.append((points[0], points[1] + 1))
+    if points[0] - 1 >= 0 and maze[points[0] - 1][points[1]] != "#":
+        nextPoints.append((points[0] - 1, points[1]))
     if points[1] - 1 >= 0 and maze[points[0]][points[1] - 1] != "#":
         nextPoints.append((points[0], points[1] - 1))
+    if points[1] + 1 < len(maze[points[0]]) and maze[points[0]][points[1] + 1] != "#":
+        nextPoints.append((points[0], points[1] + 1))
     
-    
+
     return nextPoints
-
-
 
 
 stack = []
