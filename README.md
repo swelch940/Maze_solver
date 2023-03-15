@@ -50,6 +50,8 @@ Enter the location of the start of the maze:
 ```
 It is important that you given this coordinates as a tuple. (x,y) where x is the row position and y is the column. Also note that because we're using arrays the rows and columns start at 0. 
 
+The start coordinates for all the mazes provided is (0,1).
+
 Example for the starting coordinates for maze-Small.txt is given below 
 
 ```console
@@ -100,4 +102,4 @@ The output of both algorithms will provide you with 4 different things. The firs
 
 ## Editing the files to get the path. <a name="EditingPath"></a>
 
-You can edit the code to print out each of the coordinates in the path by uncommenting the print statements in the code. The code to produce the coordinates for each point along the path to the exit is already in the code, however, since this was a university project it is currently commented out due to my professor not wanting it. Just make sure lines 59 and 60 are uncommented in the maze-solver.py file and in maze-aStar make sure lines 89 and 90 are uncommented and the program will then also output the coordinates for every point in the path.
+You can edit the code to print out each of the coordinates in the path by uncommenting the print statements in the code. The code to produce the coordinates for each point along the path to the exit is already in the code, however, since this was a university project it is currently commented out due to my professor not wanting it. Just make sure lines 58 and 59 are uncommented in the maze-solver.py file and in maze-aStar make sure lines 96 and 97 are uncommented and the program will then also output the coordinates for every point in the path.
