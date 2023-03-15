@@ -29,14 +29,19 @@ if input_end == "None":
 #Function that returns a list of all the possible legal moves at a certain point in the maze.
 def legalMoves(points, maze):
     nextPoints = []
-    if points[0] - 1 >= 0 and maze[points[0] - 1][points[1]] != "#":
-        nextPoints.append((points[0] - 1, points[1]))
     if points[1] + 1 < len(maze[points[0]]) and maze[points[0] + 1][points[1]] != "#":
         nextPoints.append((points[0] + 1, points[1]))
     if points[1] + 1 < len(maze[points[0]]) and maze[points[0]][points[1] + 1] != "#":
         nextPoints.append((points[0], points[1] + 1))
+    if points[0] - 1 >= 0 and maze[points[0] - 1][points[1]] != "#":
+        nextPoints.append((points[0] - 1, points[1]))
+    
+   
     if points[1] - 1 >= 0 and maze[points[0]][points[1] - 1] != "#":
         nextPoints.append((points[0], points[1] - 1))
+    
+    
+    
     
     
     return nextPoints
@@ -78,8 +83,15 @@ def aStar(maze, start, goal):
             fwdPath = {}
             cell = goal
             while cell != start:
+                
                 fwdPath[path[cell]] = cell
                 cell = path[cell]
+            
+            #path_through = [i for i in fwdPath]  #
+            #path_through.reverse()
+            #path_through.append(goal)
+            #print(path_through)
+   
             print("Total number of steps in path: " + str(len(fwdPath)))
             return
         
