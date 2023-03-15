@@ -64,19 +64,17 @@ def dfs(maze, start, goal, stack, seen):
 
         #Gets the list of all the possible legal moves for the current point in the maze.
         nextPoints = legalMoves(currentPoint, maze)
-        #print("Possible moves: " + str(nextPoints))
+       
         
         #Goes through the list of all the possible moves and adds them to the list of seen and the stack.
         #Also adds them as the key to their parent node. Meaning the previous move to get to that 
         for i in nextPoints:
             if i in seen:
-                #print(" Already seen " + str(i))
                 continue
             seen.add(i)
             parentMap[i] = currentPoint
-            #print("Visted nodes: " + str(seen))
             stack.append(i)
-            #print("List of nodes to visit: " + str(stack))
+    
 
 
 #Function that returns a list of all the possible legal moves at a certain point in the maze.
