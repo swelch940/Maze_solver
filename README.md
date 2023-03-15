@@ -5,18 +5,25 @@
 
 ## Table of Contents
 
+### 1. [About](#about)
+### 2. [Requirments](#requirements)
+### 3. [How to run](#Howtorun)
+### 4. [Output](#output)
+### 5. [Editing to get path](#EditingPath)
 
-## About 
+
+
+## About  <a name="about"></a>
 
 In this project we look to be able to solve a given maze by returning a path through the maze. We have implemented two different search algorithms which both will search through each potiental position of the maze until the path through the maze is found. The first algorithm implemented is a Depth-first search which will contiously consider each potiential position in the maze until a path through the maze is found. However, this algorithm does not gurantee it will find the most optimal path through the maze. It will just return the first path through the maze it finds. The second algorithm implemented is A* search. This is similar, however a huestric function is implemented making the algorithm more efficient and gurantees to return the most optimal path through the maze.
 
-## Requirements
+## Requirements  <a name="requirements"></a>
 
 The only requirement to run either of the algorithms is that you have Python installed, preferrable Python3.10 or later. 
 
 If you have your own mazes you would like to test with either of these algorithms, you will need to make sure they are in a .txt file formatted the same way as the example mazes provided. You will also need to know the coordinates for the start of the maze and the exit of the maze. 
 
-## How to run
+## How to run <a name="Howtorun"></a>
 
 In order to run the code, make sure you have navigated to the directory of both the .py files and the Mazes folder in your terminal. 
 
@@ -79,11 +86,11 @@ python3 maze-aStar.py
 The remaining process is excatly the same.
 
 
-## Output
+## Output <a name="output"></a>
 
 The output of both algorithms will provide you with 4 different things. The first is confirmation that your exit coordinates are the exit. The second is the execution time of the algorithm. Thirdly, the total number of nodes that were visited to find the path, and lastly, the total number of steps in the path to the exit. 
 
 
-## Editing the files to get the path.
+## Editing the files to get the path. <a name="EditingPath"></a>
 
 You can edit the code to print out each of the coordinates in the path by uncommenting the print statements in the code. The code to produce the coordinates for each point along the path to the exit is already in the code, however, since this was a university project it is currently commented out due to my professor not wanting it. Just make sure lines 59 and 60 are uncommented in the maze-solver.py file and in maze-aStar make sure lines 89 and 90 are uncommented and the program will then also output the coordinates for every point in the path.
