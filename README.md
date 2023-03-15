@@ -81,7 +81,7 @@ If all done correctly, the algorithm will run and you should see an output simil
 (9, 18) is the exit!
 Excecution time: 27.20883560180664
 Total nodes visited: 80
-Total number of steps in path: 26
+Total number of steps in path: 27
 ```
 
 To run the aStar search instead of the depth-first search is the same process except just run the maze-aStart file instead:
