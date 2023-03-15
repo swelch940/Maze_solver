@@ -60,13 +60,20 @@ You will then be prompted for the exit coordinates of the maze:
 ```console
 Enter the location of the exit of the maze:
 ```
-The same rules apply for the exit coordinates as the starting coordinates. 
+For the exit coordinates, you can either provide the xits coordinates liek you did for start or you can write "None" and the program will calculate the exit for you. Note, if you wirte "None" the program will take longer to run as it will need to calculate the exit coordinates. 
 
 Example for the exit coordinates for maze-Small.txt is given below.
 
 ```console
 (9,18)
 ```
+
+or 
+
+```console
+None
+```
+
 
 If all done correctly, the algorithm will run and you should see an output similar to the one below:
 
